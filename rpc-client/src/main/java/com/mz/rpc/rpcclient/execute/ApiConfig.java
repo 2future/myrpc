@@ -1,4 +1,4 @@
-package rpc.execute;
+package com.mz.rpc.rpcclient.execute;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;

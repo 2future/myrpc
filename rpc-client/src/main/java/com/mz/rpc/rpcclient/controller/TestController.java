@@ -1,9 +1,9 @@
-package rpc.controller;
+package com.mz.rpc.rpcclient.controller;
 
+import com.mz.rpc.rpcclient.remote.RemoteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import rpc.remote.RemoteService;
 
 /**
  * @author mz

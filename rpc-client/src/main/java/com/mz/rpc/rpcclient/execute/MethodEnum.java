@@ -1,4 +1,4 @@
-package rpc.execute;
+package com.mz.rpc.rpcclient.execute;
 
 public enum MethodEnum {
 

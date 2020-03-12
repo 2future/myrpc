@@ -1,4 +1,4 @@
-package rpc.remote;
+package com.mz.rpc.rpcclient.remote;
 
 import rpc.execute.MethodEnum;
 import rpc.execute.annoation.RpcServiceMethod;

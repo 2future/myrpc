@@ -1,11 +1,11 @@
-package rpc.execute.beanfactory;
+package com.mz.rpc.rpcclient.execute.beanfactory;
 
+import com.mz.rpc.rpcclient.execute.MyTestTemplate;
+import com.mz.rpc.rpcclient.execute.proxy.ExeceteProxy;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
-import rpc.execute.MyTestTemplate;
-import rpc.execute.proxy.ExeceteProxy;
 
 import java.lang.reflect.Proxy;
 

@@ -1,4 +1,4 @@
-package rpc.execute.annoation;
+package com.mz.rpc.rpcclient.execute.annoation;
 
 import java.lang.annotation.*;
 

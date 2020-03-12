@@ -1,9 +1,9 @@
-package rpc.execute.proxy;
+package com.mz.rpc.rpcclient.execute.proxy;
 
-import rpc.execute.MyTestTemplate;
-import rpc.execute.RpcServer;
-import rpc.execute.ServerNode;
-import rpc.execute.annoation.RpcServiceMethod;
+import com.mz.rpc.rpcclient.execute.MyTestTemplate;
+import com.mz.rpc.rpcclient.execute.RpcServer;
+import com.mz.rpc.rpcclient.execute.ServerNode;
+import com.mz.rpc.rpcclient.execute.annoation.RpcServiceMethod;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -37,8 +37,9 @@ public class ExeceteProxy implements InvocationHandler {
             buf.append(post);
             buf.append(annotation.url());
             Class<?> returnType = method.getReturnType();
-            Object execute = myTestTemplate.execute(annotation.method(), buf.toString(),
+            Object execute = (Object) myTestTemplate.execute(annotation.method(), buf.toString(),
                     returnType, args, null);
+
             return execute;
         }
         return null;

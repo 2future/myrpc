@@ -1,6 +1,7 @@
-package rpc.execute.annoation;
+package com.mz.rpc.rpcclient.execute.annoation;
 
-import rpc.execute.MethodEnum;
+
+import com.mz.rpc.rpcclient.execute.MethodEnum;
 
 import java.lang.annotation.*;
 

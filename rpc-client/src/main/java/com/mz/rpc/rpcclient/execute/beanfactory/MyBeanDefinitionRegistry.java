@@ -1,5 +1,6 @@
-package rpc.execute.beanfactory;
+package com.mz.rpc.rpcclient.execute.beanfactory;
 
+import com.mz.rpc.rpcclient.remote.RemoteService;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
@@ -7,7 +8,6 @@ import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor;
 import org.springframework.beans.factory.support.GenericBeanDefinition;
 import org.springframework.stereotype.Component;
-import rpc.remote.RemoteService;
 
 /**
  * @author mz
@@ -29,7 +29,7 @@ public class MyBeanDefinitionRegistry implements BeanDefinitionRegistryPostProce
     public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry beanDefinitionRegistry) throws BeansException {
 
 
-
+        registBeanDefinition(beanDefinitionRegistry,null);
     }
 
 
