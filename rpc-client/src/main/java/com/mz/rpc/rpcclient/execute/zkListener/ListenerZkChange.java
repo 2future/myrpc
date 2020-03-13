@@ -1,5 +1,6 @@
 package com.mz.rpc.rpcclient.execute.zkListener;
 
+import org.I0Itec.zkclient.IZkChildListener;
 import org.I0Itec.zkclient.IZkDataListener;
 import org.I0Itec.zkclient.ZkClient;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,7 @@ import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import java.util.List;
 
 /**
  * @author mz
@@ -25,19 +27,18 @@ public class ListenerZkChange {
 
     @PostConstruct
     public void listenUpdate(){
-        zkClient.subscribeDataChanges("rpc-server",new IZkDataListener() {
-
-            @Override
-            public void handleDataChange(String s, Object o) throws Exception {
-                System.err.println(s);
+        zkClient.subscribeChildChanges("/rpc-server", (s, list) -> {
+            System.err.println("节点变化重新处理");
+            List<String> children = zkClient.getChildren("/rpc-server");
+            for (String child : children) {
+                Object o = zkClient.readData("/rpc-server/" + child);
                 System.err.println(o);
             }
-
-            @Override
-            public void handleDataDeleted(String s) throws Exception {
-                System.err.println(s);
-            }
-
         });
+        List<String> children = zkClient.getChildren("/rpc-server");
+        for (String child : children) {
+            Object o = zkClient.readData("/rpc-server/" + child);
+            System.err.println(o);
+        }
     }
 }

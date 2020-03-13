@@ -1,4 +1,4 @@
-package com.mz.rpc.rpcclient.execute;
+package com.mz.rpc.rpcproviders.registserver;
 
 import org.I0Itec.zkclient.ZkClient;
 import org.springframework.beans.factory.annotation.Autowired;
