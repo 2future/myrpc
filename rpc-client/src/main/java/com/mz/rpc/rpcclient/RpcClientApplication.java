@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.session.SessionAutoConfiguration;
 @SpringBootApplication(
         exclude = {DataSourceAutoConfiguration.class, SessionAutoConfiguration.class},
         scanBasePackages = "com.mz.rpc.*")
-@RpcService(sacPackage = "rpc.remote.*")
+@RpcService(sacPackage = "com.mz.rpc.rpcclient.remote")
 public class RpcClientApplication {
 
     public static void main(String[] args) {
