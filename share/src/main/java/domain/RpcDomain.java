@@ -1,3 +1,5 @@
+package domain;
+
 /**
  * @author mz
  * @version V1.0
@@ -21,7 +23,7 @@ public class RpcDomain {
     /**
      * 具体地址
      */
-    RpcMethodDomain [] urls;
+    RpcMethodDomain[] urls;
 
 
     public String getIp() {

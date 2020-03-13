@@ -1,7 +1,8 @@
 package com.mz.rpc.rpcclient.remote;
 
-import rpc.execute.MethodEnum;
-import rpc.execute.annoation.RpcServiceMethod;
+
+import com.mz.rpc.rpcclient.execute.MethodEnum;
+import com.mz.rpc.rpcclient.execute.annoation.RpcServiceMethod;
 
 /**
  * @author mz

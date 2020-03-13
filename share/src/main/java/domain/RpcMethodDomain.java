@@ -1,3 +1,5 @@
+package domain;
+
 /**
  * @author mz
  * @version V1.0
@@ -26,5 +28,13 @@ public class RpcMethodDomain {
 
     public void setMethod(String method) {
         this.method = method;
+    }
+
+    @Override
+    public String toString() {
+        return "RpcMethodDomain{" +
+                "url='" + url + '\'' +
+                ", method='" + method + '\'' +
+                '}';
     }
 }
