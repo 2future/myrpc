@@ -4,6 +4,8 @@ package com.mz.rpc.rpcclient.remote;
 import com.mz.rpc.rpcclient.execute.MethodEnum;
 import com.mz.rpc.rpcclient.execute.annoation.RpcServiceMethod;
 
+import java.util.List;
+
 /**
  * @author mz
  * @version V1.0
@@ -15,7 +17,7 @@ import com.mz.rpc.rpcclient.execute.annoation.RpcServiceMethod;
 
 public interface RemoteService {
 
-    @RpcServiceMethod(method = MethodEnum.GET,url="4234234")
-    void getData();
+    @RpcServiceMethod(method = MethodEnum.GET,url="/provider/data")
+    List<String> getData();
 
 }

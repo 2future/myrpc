@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 /**
  * @author mz
  * @version V1.0
@@ -20,9 +22,9 @@ public class TestController {
     private RemoteService remoteService;
 
     @GetMapping("test")
-    public Object testQuery2() {
-        remoteService.getData();
-        return null;
+    public Object testQuery() {
+        List<String> data = remoteService.getData();
+        return data;
     }
 
 }

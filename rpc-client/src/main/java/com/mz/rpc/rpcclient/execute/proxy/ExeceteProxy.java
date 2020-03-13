@@ -34,12 +34,13 @@ public class ExeceteProxy implements InvocationHandler {
             String post = node.getPost();
             StringBuilder buf = new StringBuilder("http://");
             buf.append(ip);
+            buf.append(":");
             buf.append(post);
+            buf.append("/");
             buf.append(annotation.url());
             Class<?> returnType = method.getReturnType();
             Object execute = (Object) myTestTemplate.execute(annotation.method(), buf.toString(),
                     returnType, args, null);
-
             return execute;
         }
         return null;

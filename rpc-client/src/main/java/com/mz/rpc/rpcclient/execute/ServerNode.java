@@ -1,5 +1,8 @@
 package com.mz.rpc.rpcclient.execute;
 
+import domain.RpcMethodDomain;
+
+import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -16,6 +19,8 @@ public class ServerNode implements Comparable<ServerNode> {
     private String ip;
 
     private String post;
+
+    private List<RpcMethodDomain> rpcMethodDomainList;
 
     private AtomicInteger atomicInteger = new AtomicInteger(0);
 
@@ -63,4 +68,11 @@ public class ServerNode implements Comparable<ServerNode> {
     }
 
 
+    public List<RpcMethodDomain> getRpcMethodDomainList() {
+        return rpcMethodDomainList;
+    }
+
+    public void setRpcMethodDomainList(List<RpcMethodDomain> rpcMethodDomainList) {
+        this.rpcMethodDomainList = rpcMethodDomainList;
+    }
 }

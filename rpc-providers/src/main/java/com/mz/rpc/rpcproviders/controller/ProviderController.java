@@ -2,6 +2,9 @@ package com.mz.rpc.rpcproviders.controller;
 
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author mz
  * @version V1.0
@@ -15,9 +18,11 @@ import org.springframework.web.bind.annotation.*;
 public class ProviderController {
 
     @GetMapping("/data")
-    public String getData() {
+    public List<String> getData() {
         System.err.println("provider get 方法调用成功");
-        return "get success";
+        List<String> list=new ArrayList<>();
+        list.add("远程调用方法成功");
+        return list;
     }
 
     @PostMapping("/data")
