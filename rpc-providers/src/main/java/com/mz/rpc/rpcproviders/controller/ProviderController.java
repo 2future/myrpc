@@ -1,5 +1,7 @@
 package com.mz.rpc.rpcproviders.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -17,11 +19,14 @@ import java.util.List;
 @RequestMapping(value = "/provider")
 public class ProviderController {
 
+    @Autowired
+    Environment environment;
+
     @GetMapping("/data")
     public List<String> getData() {
         System.err.println("provider get 方法调用成功");
         List<String> list=new ArrayList<>();
-        list.add("远程调用方法成功");
+        list.add("远程调用方法成功，当前服务器端口："+environment.getProperty("local.server.port"));
         return list;
     }
 
