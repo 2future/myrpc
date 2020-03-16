@@ -1,4 +1,4 @@
-# myrpc
+# myrpc 模拟springcloud 微服务实现
 使用方法:
 启动类添加包扫描路径
 @RpcService(sacPackage = "com.mz.rpc.rpcclient.remote")
